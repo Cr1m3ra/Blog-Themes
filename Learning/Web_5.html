@@ -1,0 +1,67 @@
+<html>
+
+<head>
+<script>
+    var k=1;
+
+    // 开始计时函数
+    function AddNumToMax()
+    {
+        if(k<=10)
+            document.getElementById('start').innerHTML = k++ + "次";
+        else
+        {
+            document.getElementById('start').innerHTML = "MAX";
+            alert("已达到最大次数");
+        }     
+    }
+
+    // 重置按键函数
+    function ResetNUM()
+    {
+        k = 0;
+        document.getElementById('start').innerHTML= 0 + "次";
+    }
+
+    // 删除按键函数
+    function CloseButtons()
+    {
+        var buttons = document.getElementsByClassName ('MyButtons');
+        for(var item of buttons)
+        {
+            item.remove();
+        }
+    }
+</script>
+
+
+</head>
+
+<body>
+    <div class="MyButtons">
+        <button style="width: 100; height: 50;" id="myButton_1" type="button" 
+            onclick="AddNumToMax()">
+            开始
+        </button>
+        <button style="width: 100; height: 50;" id="myButton_2" type="reset"
+            onclick="ResetNUM()">
+            重置
+        </button>
+        <button  style="width: 100; height: 50;" id="myButton_3" type="button"
+            onclick="CloseButtons()">
+            关闭按钮
+        </button>
+        <p id="start" style="color: cornflowerblue;"></p>
+    </div>
+
+    <br />
+
+    <button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+        显示日期和时间
+    </button>
+
+    <p id="demo"></p>
+
+</body>
+</html>
