@@ -18,3 +18,8 @@
 
 ## Web_5
 - JS - Button
+
+## Web_6
+- Title标签
+- 链接本地CSS样式
+- CSS基本用法

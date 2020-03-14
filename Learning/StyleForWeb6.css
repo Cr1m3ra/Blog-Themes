@@ -1,0 +1,61 @@
+/* id对应 # */
+#IdTest
+{
+	text-align: left; 
+	background-color: black;
+	color: red;
+	size: 20px;
+}
+
+/* class对应 . */
+.ClassTest
+{
+	text-align: right;
+	background-color: red;
+	color: black;
+	size: 20px;
+}
+
+
+/* 对postBody下的h1进行整体定制 */
+.postBody h1
+{
+	text-align: center;
+	color: blue;
+	font-size: 30px;
+}
+
+/* 对第三章中的h2进行单独定制 */
+.postBody #blogs_post_body_2 h2
+{
+	text-align: left;
+	font-size: 20px;
+	color: cadetblue;
+}
+
+/* 对第三章中的p进行单独定制 */
+.postBody #blogs_post_body_2 p
+{
+	color: chartreuse;
+}
+
+/* #blogs_post_body_1 h1
+{
+	text-align: center;
+	font-size: 30px;
+	color: chocolate;
+}
+
+#blogs_post_body_2 h1
+{
+	text-align: center;
+	font-size: 30px;
+	color: cornflowerblue;
+} */
+
+/* #blogs_post_body_1 h1
+{
+	text-align: left;
+	font-size: 20px;
+	color: black;
+} */
