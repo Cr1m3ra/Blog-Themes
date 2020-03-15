@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<title>Input Test</title>
+
+<script>
+    var UserName = "无";
+    var UserPassword = "无";
+    var UserGender = "男";
+
+    function SetName(name) {
+        UserName = name;
+    }
+    function SetPassword(password) {
+        UserPassword = password;
+    }
+    function SetGender(gender) {
+        UserGender = gender;
+    }
+
+
+    function Print() {
+        document.getElementById('PrintInfor_Text').innerHTML =
+            "用户名：" + UserName + "  密码：" + UserPassword + "  性别：" + UserGender;
+    }
+    function ResetInfor() {
+        UserName = "无";
+        UserPassword = "无";
+        UserGender = "男";
+        Print();
+    }
+</script>
+
+<body>
+    <form id="GetInfor">
+        <!-- 输入文本域 -->
+        用户：
+        <input type="text" name="user" onchange="SetName(this.value)">
+        <button type="reset">RESET</button>
+        <br />
+
+        密码：
+        <input type="password" name="password" onchange="SetPassword(this.value)">
+        <button type="reset">RESET</button>
+        <br />
+
+        <!-- 单选按钮 -->
+        男性：
+        <input type="radio" checked="checked" name="Sex" value="男" onchange="SetGender(this.value)" />
+        女性：
+        <input type="radio" name="Sex" value="女" onchange="SetGender(this.value)" />
+    </form>
+
+    <form id="PrintInfor">
+        <br /><br />
+        <button type="button" onclick="Print()">显示信息：</button>
+
+        <p id="PrintInfor_Text"></p>
+    </form>
+
+    <!-- 下拉选框 -->
+    <form id="Hobby">
+        <br />
+        爱好：
+        <select name="kkk">
+            <option value="唱">唱</option>
+            <option value="跳">跳</option>
+            <option value="Rap">Rap</option>
+            <option value="篮球">篮球</option>
+        </select>
+    </form>
+
+    <!-- 文本域 -->
+    <form id="TextArea">
+        <br />
+        <p>用于吐槽的文本框：</p>
+        <textarea rows="10" cols="30">为啥还不开学......
+        </textarea>
+    </form>
+
+    <!-- 文本边框 -->
+    <form>
+        <fieldset>
+            <legend style="color: green;">健康信息</legend>
+            身高：<input type="text" />
+            体重：<input type="text" />
+        </fieldset>
+    </form>
+
+    <!-- 多选框 -->
+    <form name="input" action="/html/html_form_action.asp" method="get">
+        <fieldset>
+            <legend style="color:maroon;">多选框</legend>
+            I have a bike:
+            <input type="checkbox" name="vehicle" value="Bike" checked="checked" />
+            <br />
+            I have a car:
+            <input type="checkbox" name="vehicle" value="Car" />
+            <br />
+            I have an airplane:
+            <input type="checkbox" name="vehicle" value="Airplane" />
+        </fieldset>
+</body>
+
+</html>
